@@ -8,6 +8,7 @@ tools = [
     "nmap",                # Nmap
     "theharvester",         # theHarvester
     "nikto",               # Nikto
+    "amass",               # Subdomain Enumeration
 
     # Vulnerability Scanners
     "openvas",             # OpenVAS
@@ -16,6 +17,7 @@ tools = [
     # Exploitation Tools
     "metasploit-framework", # Metasploit Framework
     "sqlmap",              # SQLmap
+    "exploitdb",           # Local Exploit Database (searchsploit)
 
     # Password Cracking Tools
     "john",                # John the Ripper
@@ -28,14 +30,31 @@ tools = [
     # Web Application Tools
     "zaproxy",             # OWASP ZAP
     "wfuzz",               # Wfuzz
+    "ffuf",                # Ffuf (Fuzzing)
+    "feroxbuster",         # Feroxbuster
+    "wpscan",              # WordPress Scanner
 
     # Network Sniffing and Spoofing
     "wireshark",           # Wireshark
     "ettercap-graphical",  # Ettercap
+    "responder",           # Responder (LLMNR/NBT-NS Poisoning)
+    "bettercap",           # Bettercap (MITM)
+    "masscan",             # Masscan (Fast Port Scanner)
+
+    # Active Directory & Red Teaming
+    "bloodhound",          # BloodHound
+    "crackmapexec",        # CrackMapExec (AD Enum)
+    "python3-impacket",    # Impacket tools
+
+    # API Hacking
+    "mitmproxy",           # Mitmproxy (API Interception)
 
     # Bonus Tools
     "dirb",                # Dirb
     "gobuster",            # Gobuster
+    "seclists",            # Mandatory Wordlists
+    "proxychains4",        # Network Pivoting
+    "cherrytree",          # Note taking & Reporting
 ]
 
 def install_tools():
@@ -101,6 +120,33 @@ def install_tools():
         print("Shodan installed successfully!\n")
     except subprocess.CalledProcessError as e:
         print(f"Failed to install Shodan. Error: {e}\n")
+
+    # Install Arjun (via pip)
+    print("\n8. Installing Arjun (API Parameter Fuzzer)...")
+    try:
+        subprocess.run(["pip3", "install", "arjun"], check=True)
+        print("Arjun installed successfully!\n")
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install Arjun. Error: {e}\n")
+
+    # Install jwt_tool (via git)
+    print("\n9. Installing jwt_tool...")
+    try:
+        subprocess.run(["git", "clone", "https://github.com/ticarpi/jwt_tool.git"], check=True)
+        subprocess.run(["pip3", "install", "-r", "jwt_tool/requirements.txt"], check=True)
+        print("jwt_tool installed successfully!\n")
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install jwt_tool. Error: {e}\n")
+
+    # Additional manual tools instructions
+    print("\n10. Nuclei is a powerful vulnerability scanner.")
+    print("    Download it from https://github.com/projectdiscovery/nuclei or install via Go.")
+
+    print("\n11. Advanced C2 Frameworks (Sliver, Havoc, Mythic) require manual setup.")
+    print("    Check their respective GitHub repositories for installation instructions.")
+
+    print("\n12. Kiterunner (API Discovery tool) requires manual download.")
+    print("    Download releases from https://github.com/assetnote/kiterunner")
 
     print("\nAll tools installed or instructions provided!")
 
