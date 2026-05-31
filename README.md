@@ -1,125 +1,136 @@
 # Penetration Testing Tools Installer
 
-This Python script automates the installation of essential penetration testing tools on Debian-based Linux distributions (e.g., Ubuntu). It installs tools for reconnaissance, vulnerability scanning, exploitation, password cracking, wireless network analysis, and more.
+This Python script automates the installation of essential cybersecurity, red teaming, web penetration testing, and API hacking tools on Debian/Ubuntu-based Linux distributions. It is designed to configure a robust environment ready for full, professional cybersecurity engagements.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Installs over 20 popular penetration testing tools.
-- Handles tools available in default repositories and provides instructions for manual installation of others.
-- Easy to use and customizable.
-
----
-
-## Tools Included
-
-### Reconnaissance Tools
-- **Nmap** - Network mapper for discovering hosts and services.
-- **Recon-ng** - Web reconnaissance framework.
-- **theHarvester** - Gathers emails, subdomains, and other information from public sources.
-
-### Vulnerability Scanners
-- **Nessus** - Comprehensive vulnerability scanner.
-- **OpenVAS** - Open-source vulnerability assessment tool.
-- **Nikto** - Web server vulnerability scanner.
-
-### Exploitation Tools
-- **Metasploit Framework** - Tool for developing and executing exploits.
-- **SQLmap** - Automates SQL injection detection and exploitation.
-- **Burp Suite** - Web application security testing tool.
-
-### Password Cracking Tools
-- **John the Ripper** - Fast password cracker.
-- **Hashcat** - Advanced password recovery tool (GPU-based).
-- **Hydra** - Network login cracker.
-
-### Wireless Network Tools
-- **Aircrack-ng** - Suite for assessing Wi-Fi network security.
-- **Kismet** - Wireless network detector and sniffer.
-
-### Post-Exploitation Tools
-- **Cobalt Strike** - Advanced threat emulation tool.
-- **Empire** - Post-exploitation framework for PowerShell and Python.
-
-### Web Application Tools
-- **OWASP ZAP** - Open-source web application security scanner.
-- **Wfuzz** - Web application fuzzing tool.
-
-### Network Sniffing and Spoofing
-- **Wireshark** - Network protocol analyzer.
-- **Ettercap** - Suite for man-in-the-middle (MITM) attacks.
-
-### Bonus Tools
-- **Dirb/Dirbuster** - Directory brute-forcing tools.
-- **Gobuster** - Fast directory/file and DNS brute-forcing tool.
-- **Shodan** - Search engine for discovering exposed devices and services.
+*   **45 Industry-Standard Tools** spanning across 10 specialized security domains.
+*   **Smart Multi-Method Installer**: Seamlessly handles standard Ubuntu repositories (`apt`), manual repository clones (`git`), Python modules (`pip`), and provides manual instructions for advanced commercial or proprietary software.
+*   **Fully Configured**: Bridges the gap for modern cybersecurity testing by including essential wordlists (`seclists`), pivoting setups, and advanced API assessment utilities.
 
 ---
 
-## Requirements
+## 🛠️ Complete Tools Catalog (45 Tools)
 
-- **Operating System**: Debian-based Linux (e.g., Ubuntu).
-- **Python**: Python 3.x installed.
-- **Permissions**: Run the script with `sudo` privileges.
+### 1. Fully Automated Installations (`apt`)
+
+The script will automatically update your package index and install the following **32 packages** via the system package manager:
+
+| Category | Tool | Purpose / Description |
+| :--- | :--- | :--- |
+| **Reconnaissance** | `nmap` | Industry-standard network mapper & port scanner |
+| | `theharvester` | OSINT gathering (emails, subdomains, hosts) |
+| | `nikto` | Rapid web server vulnerability scanner |
+| | `amass` | Active & passive subdomain enumeration |
+| **Vulnerability Scanners** | `openvas` | Comprehensive open-source vulnerability assessment suite |
+| | `nessus` | Enterprise-grade vulnerability management engine (requires setup) |
+| **Exploitation** | `metasploit-framework` | Rapid exploit development and deployment system |
+| | `sqlmap` | Automated SQL injection detection and database takeover |
+| | `exploitdb` | Local database lookup tool (`searchsploit`) |
+| **Password Cracking** | `john` | Fast and flexible password hash cracker |
+| | `hydra` | Very fast network login brute-forcing tool |
+| **Wireless Analysis** | `aircrack-ng` | Comprehensive suite for 802.11 WEP and WPA-PSK analysis |
+| | `kismet` | Wireless network detector, sniffer, and wardriving tool |
+| **Web Applications** | `zaproxy` | OWASP Zed Attack Proxy web app scanner |
+| | `wfuzz` | Web application fuzzer and payload injector |
+| | `ffuf` | Extremely fast web directory & parameter fuzzer (Go-based) |
+| | `feroxbuster` | Recursive and fast directory discovery engine |
+| | `wpscan` | Black-box WordPress security assessment scanner |
+| **Sniffing & Spoofing** | `wireshark` | The world's foremost network protocol analyzer |
+| | `ettercap-graphical` | Suite for interactive man-in-the-middle (MITM) attacks |
+| | `responder` | LLMNR, NBT-NS and MDNS active poisoner |
+| | `bettercap` | Complete modular MITM and network analysis framework |
+| | `masscan` | Extremely fast TCP/UDP port scanner |
+| **Active Directory** | `bloodhound` | Active Directory relationship map path visualizer |
+| | `crackmapexec` | AD domain evaluation post-exploitation tool |
+| | `python3-impacket` | Network protocol manipulation library and script suite |
+| **API Hacking** | `mitmproxy` | Interactive HTTPS interception proxy for API traffic |
+| **Utility & Pivoting** | `dirb` | Standard content scanner |
+| | `gobuster` | Fast directory, DNS, and vhost brute-forcer |
+| | `seclists` | Mandatory collection of security list payloads and wordlists |
+| | `proxychains4` | Dynamic SOCKS chain connection standard for pivoting |
+| | `cherrytree` | Hierarchical note-taking for engagement logging |
 
 ---
 
-## Usage
+### 2. Script-Assisted Installations (`git` & `pip3`)
 
-1. Clone the repository:
-   **git clone**
+These **5 tools** are cloned directly from GitHub or installed via Python package indices, complete with their libraries:
 
-2. Make the script executable:
-**chmod +x install_tools.py**
+*   **Recon-ng** (OSINT Reconnaissance framework) — Cloned and installed via `git` + `pip3`.
+*   **Empire** (Post-exploitation C2 framework) — Cloned and configured via standard installer script.
+*   **Shodan** (Search engine API client) — Installed via `pip3`.
+*   **Arjun** (HTTP API parameter fuzzer) — Installed via `pip3`.
+*   **jwt_tool** (JSON Web Token hacking toolkit) — Cloned and dependencies installed via `pip3`.
 
-3. Run the script:
-**sudo python3 install_tools.py**
+---
 
-4. Follow the on-screen instructions for tools that require manual installation.
+### 3. Guided Manual Installations
 
-## Manual Installation Instructions 
-Some tools are not available in the default repositories and require manual installation. The script will guide you through the process for the following tools:
+The script provides direct URLs and instruction logs to complete the download and setup of these **8 essential frameworks**:
 
-- **Nessus:** Download from Tenable.
+1.  **Burp Suite** — Local proxy and web app inspection toolkit (Download from [PortSwigger](https://portswigger.net/burp/releases)).
+2.  **Hashcat** — Fast GPU-based password recovery engine (Download from [Hashcat.net](https://hashcat.net/hashcat/)).
+3.  **Cobalt Strike** — Premium commercial threat emulation and adversary simulation C2 platform ([Cobalt Strike](https://www.cobaltstrike.com/)).
+4.  **Nuclei** — Fast and customizable template-based vulnerability scanner ([ProjectDiscovery](https://github.com/projectdiscovery/nuclei)).
+5.  **Sliver C2** — Go-based implant C2 framework for adversary simulation ([BishopFox](https://github.com/bishopfox/sliver)).
+6.  **Havoc C2** — Modern and evasion-focused C2 system ([Havoc](https://github.com/HavocFramework/Havoc)).
+7.  **Mythic C2** — Collaborative cross-platform agent C2 framework ([Mythic](https://github.com/its-a-feature/Mythic)).
+8.  **Kiterunner** — Advanced API endpoint and route brute-forcing tool ([Assetnote](https://github.com/assetnote/kiterunner)).
 
-- **Burp Suite:** Download from PortSwigger.
+---
 
-- **Hashcat:** Download from Hashcat.
+## 📋 Requirements
 
-- **Cobalt Strike:** Purchase and download from Cobalt Strike.
+*   **OS**: Debian-based Linux distribution (Ubuntu, Debian, or Linux Mint).
+*   **Python**: Python 3.x installed with `pip3` available.
+*   **Permissions**: The script must be run with **`sudo`** privileges.
 
-- **Empire:** Installed automatically via Git.
+---
 
-- **Shodan:** Installed automatically via pip.
+## 🚀 Usage
 
-## Contributing
+1.  **Clone this repository**:
+    ```bash
+    git clone <YOUR_REPOSITORY_URL>
+    cd Ubuntu-Pentool
+    ```
 
-Contributions are welcome! If you’d like to add more tools or improve the script, follow these steps:
+2.  **Make the installation script executable**:
+    ```bash
+    chmod +x Setup.py
+    ```
 
-1. Fork the repository.
+3.  **Run the script as root**:
+    ```bash
+    sudo python3 Setup.py
+    ```
 
-2. Create a new branch:
-**git checkout -b feature/new-tool**
+4.  **Follow the terminal output logs** to complete any manual configurations for C2 frameworks or local proxy installations.
 
-3. Make your changes and commit them:
-**git commit -m "Added support for new-tool"**
+---
 
-4. Push to the branch:
-**git push origin feature/new-tool**
+## 🤝 Contributing
 
-5. Open a pull request.
+Contributions are always welcome! If you would like to include support for extra tools or enhance the setup scripts:
+1. Fork this Repository.
+2. Create a feature branch: `git checkout -b feature/awesome-new-tool`
+3. Commit your changes: `git commit -m "Add support for awesome-new-tool"`
+4. Push to your branch: `git push origin feature/awesome-new-tool`
+5. Open a Pull Request.
 
-## License
+---
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## ⚠️ Ethical Disclaimer
 
-## Disclaimer
+This repository and the automated installation script are designed **exclusively for educational, authorized penetration testing, and ethical security analysis purposes**. 
 
-This script is intended for educational and ethical purposes only. Do not use it for illegal or malicious activities. The author is not responsible for any misuse of this tool.
+Performing security assessments or active network scanning without explicit, written, and authorized consent from the target environment owner is strictly illegal. The author holds absolutely no responsibility or liability for any actions, damage, or misuse stemming from this toolkit. **Always obtain written permission before conducting security assessments.**
 
-## Support
+---
 
-If you encounter any issues or have questions, feel free to open an issue on GitHub or reach out to me directly.
+## 📄 License
 
-## Enjoy Hacking Responsibly! 😎🔥
+This project is licensed under the **MIT License**. Check the `LICENSE` file for more details.
